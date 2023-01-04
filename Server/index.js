@@ -148,7 +148,7 @@ const all_projects = [
 // });
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+// app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.get("/server/web", (req, res) => {
     const web_projects = [];
@@ -188,9 +188,9 @@ app.get("/server/python", (req, res) => {
     });
     res.json({projects: py_projects});
 });
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-  });
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+//   });
 app.listen(PORT, () => {
     console.log("Rana");
 })
