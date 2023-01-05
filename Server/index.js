@@ -150,7 +150,7 @@ const all_projects = [
 // Have Node serve the files for our built React app
 // app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-app.get("/server/web", (req, res) => {
+app.get("/api/web", (req, res) => {
     const web_projects = [];
     all_projects.forEach(project => {
         if (project.type == "web"){
