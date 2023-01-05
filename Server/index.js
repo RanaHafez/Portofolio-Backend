@@ -1,7 +1,8 @@
 const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
-app.use('/public', express.static('public'));
+const cors = require('cors');
+
 const all_projects = [
     {
         "type": "desktop",
@@ -150,7 +151,17 @@ const all_projects = [
 // Have Node serve the files for our built React app
 // app.use(express.static(path.resolve(__dirname, '../client/build')));
 
+// const corsOptions ={
+//     origin:'*', 
+//     credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200
+// }
+
+app.use('/public', express.static('public'));
+app.use(cors());
+
 app.get("/server/web", (req, res) => {
+    
     const web_projects = [];
     all_projects.forEach(project => {
         if (project.type == "web"){
@@ -161,6 +172,7 @@ app.get("/server/web", (req, res) => {
 });
 
 app.get("/server/app", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const url = req.protocol + '://' + req.get('host')
     const app_projects = [];
     all_projects.forEach(project => {
