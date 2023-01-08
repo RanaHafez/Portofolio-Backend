@@ -151,14 +151,14 @@ const all_projects = [
 // Have Node serve the files for our built React app
 // app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-const corsOptions ={
-    origin:'https://portofolio-8jzk.onrender.com', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
+// const corsOptions ={
+//     origin:'https://portofolio-8jzk.onrender.com', 
+//     credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200
+// }
 
 app.use('/public', express.static('public'));
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("/server/web", (req, res) => {
     
