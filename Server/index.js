@@ -151,14 +151,14 @@ const all_projects = [
 // Have Node serve the files for our built React app
 // app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-// const corsOptions ={
-//     origin:'https://portofolio-8jzk.onrender.com', 
-//     credentials:true,            //access-control-allow-credentials:true
-//     optionSuccessStatus:200
-// }
+const corsOptions ={
+    origin:'https://portofolio-8jzk.onrender.com', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
 
 app.use('/public', express.static('public'));
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.get("/server/web", (req, res) => {
     res.header("Access-Control-Allow-Origin", "https://portofolio-8jzk.onrender.com");
@@ -172,7 +172,7 @@ app.get("/server/web", (req, res) => {
 });
 
 app.get("/server/app", (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "https://portofolio-8jzk.onrender.com");
     const url = req.protocol + '://' + req.get('host')
     const app_projects = [];
     all_projects.forEach(project => {
@@ -192,6 +192,7 @@ app.get("/server/app", (req, res) => {
 });
 
 app.get("/server/python", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "https://portofolio-8jzk.onrender.com");
     const py_projects = [];
     all_projects.forEach(project => {
         if (project.lang == "python"){
