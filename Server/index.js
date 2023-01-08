@@ -161,7 +161,7 @@ app.use('/public', express.static('public'));
 app.use(cors());
 
 app.get("/server/web", (req, res) => {
-    
+    res.header("Access-Control-Allow-Origin", "*");
     const web_projects = [];
     all_projects.forEach(project => {
         if (project.type == "web"){
