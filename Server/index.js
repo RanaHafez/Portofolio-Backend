@@ -150,7 +150,16 @@ const all_projects = [
         "role": "Full-Stack Developer",
         "description": "Quiz me!! an app that will test you knowledge in computers by asking 10 questions. The questions are from opendb API.",
         "github": "https://github.com/RanaHafez/QuizMeApp",
-        "image": "\public/blocker.gif"
+        "image": "\public/quiz-me.gif"
+    },
+    {
+        "type": "app",
+        "lang": "dart",
+        "title": "Random Animal Sounds",
+        "role": "Full-Stack Developer",
+        "description": "An app that displays a random animal with its sound.",
+        "github": "https://github.com/RanaHafez/Flutter-AudioPlay-RandomAnimalSounds",
+        "image": "\public/random-sound.gif"
     }
 ];
 // app.get("/", (req, res) => {
