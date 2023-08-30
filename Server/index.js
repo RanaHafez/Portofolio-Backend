@@ -142,6 +142,15 @@ const all_projects = [
         "description": "My graduation project. Imagine being able to read as many books as you want!! this app allows readers to provide and borrow books.",
         "github": "https://github.com/RanaHafez/Graduation_Project_BLocker",
         "image": "\public/blocker.gif"
+    },
+    {
+        "type": "app",
+        "lang": "dart",
+        "title": "Quiz Me App",
+        "role": "Full-Stack Developer",
+        "description": "Quiz me!! an app that will test you knowledge in computers by asking 10 questions. The questions are from opendb API.",
+        "github": "https://github.com/RanaHafez/QuizMeApp",
+        "image": "\public/blocker.gif"
     }
 ];
 // app.get("/", (req, res) => {
