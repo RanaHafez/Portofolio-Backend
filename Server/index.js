@@ -21,6 +21,14 @@ const all_projects = [
         "image": "https://raw.githubusercontent.com/RanaHafez/Speech-Recognition/master/img.png"
     },
     {
+        "type": "web",
+        "lang": "python",
+        "title": "Signup Component",
+        "description": "A Flask web app that recognizes speach in 2 different languages (Ar and En).",
+        "github": "https://ranahafez.github.io/signup-component-forontend-mentor/",
+        "image": "https://github.com/RanaHafez/signup-component-forontend-mentor/raw/main/images/image.png"
+    },
+    {
         "type": "desktop",
         "lang": "python",
         "title": "Typing Speed Test",
